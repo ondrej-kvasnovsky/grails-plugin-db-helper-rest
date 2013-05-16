@@ -3,6 +3,13 @@ DB Helper - REST
 
 Provides methods for dropping, creating and initialization of database schema from the project bootstrap. For example, you can call `dbHelper/dropCreateInit` after each end-to-end test to have the fresh data in the database.
 
+You have to exclude this plugin in production mode since the plugin is meant to be used only in development or test environments. In Config.groovy:
+`environments {
+    production {
+        grails.plugin.excludes = ['db-helper-rest']
+    }
+}`
+
 Usage
 =====
 
