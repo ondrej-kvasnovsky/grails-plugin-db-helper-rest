@@ -6,7 +6,7 @@ Provides methods for dropping, creating and initialization of database schema fr
 Usage
 =====
 
-The plugin provides methods that are exposed via REST API. It makes possible to:
+The plugin provides methods that are exposed via REST API (use GET). It makes possible to:
 * drop database schema
   * `http://localhost:8080/your-app/dbHelper/drop`
 * create database schema
