@@ -1,4 +1,4 @@
-class GrailsPluginDbHelperRestGrailsPlugin {
+class DbHelperRestGrailsPlugin {
 
     def version = "0.1"
     def grailsVersion = "2.1 > *"
