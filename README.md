@@ -8,15 +8,15 @@ Usage
 
 The plugin provides methods that are exposed via REST API. It makes possible to:
 * drop database schema
-  * `http://localhost:8080/your-project/`<strong style="color: #4183c4;">`dbHelper/drop`</strong>
+  * `http://localhost:8080/your-app/dbHelper/drop`
 * create database schema
-  * `http://localhost:8080/your-project/`<strong style="color: #4183c4;">`dbHelper/create`</strong>
+  * `http://localhost:8080/your-app/dbHelper/create`
 * call init closure from the project BootStrap.groovy
-  * `http://localhost:8080/your-project/`<strong style="color: #4183c4;">`dbHelper/init`</strong>
+  * `http://localhost:8080/your-app/dbHelper/init`
 * drop and create database schema
-  * `http://localhost:8080/your-project/`<strong style="color: #4183c4;">`dbHelper/dropCreate`</strong>
+  * `http://localhost:8080/your-app/dbHelper/dropCreate`
 * drop and create database schema and call init closure from the project BootStrap.groovy
-  * `http://localhost:8080/your-project/`<strong style="color: #4183c4;">`bHelper/dropCreateInit`</strong>
+  * `http://localhost:8080/your-app/dbHelper/dropCreateInit`
 
 Install
 =======
