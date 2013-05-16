@@ -7,6 +7,14 @@ grails.project.dependency.resolution = {
 
     repositories {
         grailsCentral()
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        compile "org.hibernate:hibernate-core:3.6.10.Final", {
+            transitive = false
+        }
     }
 
     plugins {
