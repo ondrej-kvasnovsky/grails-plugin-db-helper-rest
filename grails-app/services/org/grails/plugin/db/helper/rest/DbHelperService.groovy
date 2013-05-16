@@ -30,7 +30,7 @@ class DbHelperService {
             return true
 
         } catch (Exception e) {
-            e.printStackTrace()
+            log.error e.message, e
             return false
         }
     }
@@ -46,7 +46,7 @@ class DbHelperService {
             return true
 
         } catch (Exception e) {
-            e.printStackTrace()
+            log.error e.message, e
             return false
         }
     }
@@ -63,7 +63,7 @@ class DbHelperService {
             return true
 
         } catch (Exception e) {
-            e.printStackTrace()
+            log.error e.message, e
             return false
         }
     }
@@ -80,7 +80,7 @@ class DbHelperService {
             return true
 
         } catch (Exception e) {
-            e.printStackTrace()
+            log.error e.message, e
             return false
         }
     }
@@ -97,7 +97,7 @@ class DbHelperService {
             return true
 
         } catch (Exception e) {
-            e.printStackTrace()
+            log.error e.message, e
             return false
         }
     }
