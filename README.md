@@ -28,4 +28,9 @@ The plugin provides methods that are exposed via REST API (use GET). It makes po
 Install
 =======
 
-`grails install-plugin db-helper-rest`
+Add a dependency for the plugin in BuildConfig.groovy:
+
+    plugins {
+       ...
+       runtime ":db-helper-rest:0.1"
+    }
