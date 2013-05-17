@@ -1,8 +1,8 @@
 class DbHelperRestGrailsPlugin {
 
-    def version = "0.2"
+    def version = "0.3"
     def grailsVersion = "2.0 > *"
-    def title = "DB Helper - Rest"
+    def title = "DB Helper - REST"
     def author = "Ondrej Kvasnovsky"
     def authorEmail = "ondrej.kvasnovsky@gmail.com"
     def description = 'Provides methods for dropping, creating and initialization of database schema from the project bootstrap.'

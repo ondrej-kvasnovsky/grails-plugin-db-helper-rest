@@ -24,10 +24,14 @@ class BootstrapInit {
         ServletContext servletContext = applicationContext.servletContext
         GrailsClass[] bootstraps = grailsApplication.getArtefacts(TYPE)
         for (GrailsClass bootstrap : bootstraps) {
-            GrailsBootstrapClass bootstrapClass = bootstrap
-            Object instance = bootstrapClass.referenceInstance
-            applicationContext.autowireCapableBeanFactory.autowireBeanProperties(instance, AUTOWIRE_BY_NAME, false)
-            bootstrapClass.callInit(servletContext)
+            String bootstrapName = bootstrap.fullName
+            if ('BootStrap'.equals(bootstrapName)) {
+                println bootstrapName
+                GrailsBootstrapClass bootstrapClass = bootstrap
+                Object instance = bootstrapClass.referenceInstance
+                applicationContext.autowireCapableBeanFactory.autowireBeanProperties(instance, AUTOWIRE_BY_NAME, false)
+                bootstrapClass.callInit(servletContext)
+            }
         }
     }
 }
