@@ -1,13 +1,10 @@
 package org.grails.plugin.db.helper.rest
 
-import grails.plugins.springsecurity.Secured
-
 /**
  * Provides REST methods for {@link DbHelperService}. E.g. http://localhost:8080/dbHelper/dropCreateInit
  *
  * @author Ondrej Kvasnovsky
  */
-@Secured("IS_AUTHENTICATED_ANONYMOUSLY")
 class DbHelperController {
 
     DbHelperService dbHelperService
