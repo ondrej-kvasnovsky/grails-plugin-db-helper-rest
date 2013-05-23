@@ -13,15 +13,14 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
-        compile "org.hibernate:hibernate-core:3.6.10.Final" {
+        compile "org.hibernate:hibernate-core:3.6.10.Final", {
             transitive = false
         }
     }
 
     plugins {
-        build ":release:2.2.1", ":rest-client-builder:1.0.3" {
+        build ":release:2.2.1", ":rest-client-builder:1.0.3", {
             export = false
-            transitive = false
         }
     }
 }
