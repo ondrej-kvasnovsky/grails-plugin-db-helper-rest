@@ -26,7 +26,6 @@ class BootstrapInit {
         for (GrailsClass bootstrap : bootstraps) {
             String bootstrapName = bootstrap.fullName
             if ('BootStrap'.equals(bootstrapName)) {
-                println bootstrapName
                 GrailsBootstrapClass bootstrapClass = bootstrap
                 Object instance = bootstrapClass.referenceInstance
                 applicationContext.autowireCapableBeanFactory.autowireBeanProperties(instance, AUTOWIRE_BY_NAME, false)
