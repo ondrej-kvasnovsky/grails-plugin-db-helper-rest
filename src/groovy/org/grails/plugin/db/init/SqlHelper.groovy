@@ -53,4 +53,17 @@ class SqlHelper {
         }
         log.info("Executing \"$path\": end")
     }
+
+    String getRoot() {
+        String dbInitScript
+        String dbInitScriptProperty = 'grails.db.init.script.location'
+        if (System.env[dbInitScriptProperty]) {
+            dbInitScript = System.env[dbInitScriptProperty]
+        }
+        if (System.properties[dbInitScriptProperty]) {
+            dbInitScript = System.properties[dbInitScriptProperty]
+        }
+        String root = new File(dbInitScript).parentFile.absolutePath + File.separator
+        return root
+    }
 }
