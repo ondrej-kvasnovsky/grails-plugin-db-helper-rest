@@ -41,8 +41,15 @@ class DbInitScript {
      */
     boolean isAvailable() {
         boolean res = false
-        String dbInitScript = grailsApplication.config.grails.db.init.script.location
-        if (dbInitScript) {
+        String dbInitScriptLocation = grailsApplication.config.grails.db.init.script.location
+        if (dbInitScriptLocation) {
+            String dbInitScript = dbInitScriptLocation.trim()
+            if ("".equals(dbInitScript)) {
+                return false;
+            }
+            if ("{}".equals(dbInitScript)) {
+                return false;
+            }
             res = true
         }
         return res
