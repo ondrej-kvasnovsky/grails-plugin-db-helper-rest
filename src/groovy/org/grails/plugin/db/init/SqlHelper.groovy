@@ -2,7 +2,6 @@ package org.grails.plugin.db.init
 
 import grails.util.Holders
 import groovy.sql.Sql
-import org.apache.commons.logging.LogFactory
 import org.codehaus.groovy.grails.commons.GrailsApplication
 import org.springframework.context.ApplicationContext
 
@@ -25,8 +24,6 @@ import javax.sql.DataSource
  * @author Ondrej Kvasnovsky
  */
 class SqlHelper {
-
-    private static final log = LogFactory.getLog(this)
 
     void execute(String path) {
         log.info("Executing \"$path\": start")
@@ -51,7 +48,7 @@ class SqlHelper {
                 br.close();
             }
         }
-        log.info("Executing \"$path\": end")
+        println "Executing \"$path\": end"
     }
 
     String getRoot() {

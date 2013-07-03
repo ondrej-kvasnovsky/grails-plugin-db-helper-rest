@@ -1,6 +1,5 @@
 package org.grails.plugin.db.init
 
-import org.apache.commons.logging.LogFactory
 import org.codehaus.groovy.grails.commons.GrailsApplication
 import org.springframework.context.ApplicationContext
 
@@ -10,8 +9,6 @@ import org.springframework.context.ApplicationContext
  * @author Ondrej Kvasnovsky
  */
 class DbInitScript {
-
-    private static final log = LogFactory.getLog(this)
 
     GrailsApplication grailsApplication
 
@@ -32,7 +29,7 @@ class DbInitScript {
             GroovyShell shell = new GroovyShell(loader, binding)
             shell.evaluate(script.text)
         } else {
-            log.error "Script doesn't exist: $scriptFile"
+            println "Script doesn't exist: $scriptFile"
         }
     }
 
